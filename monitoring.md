@@ -2,12 +2,12 @@
 
     It is an incredibly simple, self-hosted module,to add to Express server. It exposes a /status route that reports real-time server metrics with the help of Socket.io and Chart.js.
 
-## Step 1. sudo npm install express-status-monitor --save
+### Step 1. sudo npm install express-status-monitor --save
 
-## Step 2. app.use(require('express-status-monitor')()); 
+### Step 2. app.use(require('express-status-monitor')()); 
     this need to be added before any other middleware or router
 
-## Step 3. Run server and go to serverurl/status
+### Step 3. Run server and go to serverurl/status
 
 # Clinic.js
 
@@ -30,15 +30,15 @@
 
 ## Installing Clinic.js
 
-## Step 1. npm install -g clinic
+### Step 1. npm install -g clinic
 
-## Step 2. clinic mode name(doctor/flame/bubbleprof) --node server-starting-filename.js
+### Step 2. clinic mode name(doctor/flame/bubbleprof) --node server-starting-filename.js
 
-## Step 3. download a package to run loadtesting, here using autocannon, install it using npm install -g autocannon
+### Step 3. download a package to run loadtesting, here using autocannon, install it using npm install -g autocannon
 
-## Step 4. In a parallel terminal run autocannon -c number of connections -a amount of requests  server url
+### Step 4. In a parallel terminal run autocannon -c number of connections -a amount of requests  server url
 
-## Step 5. In the terminal running clininc, press ctrl+c to generate an html report
+### Step 5. In the terminal running clininc, press ctrl+c to generate an html report
 
 # Pm2
 
@@ -46,14 +46,14 @@ Running Node.js applications in production gets a lot easier with PM2. It’s a 
 
 ## Installing pm2
 
- ## Step 1. sudo npm install -g pm2
+ ### Step 1. sudo npm install -g pm2
 
- ## Step 2. Start the pm2 process
+ ### Step 2. Start the pm2 process
 
     pm2 start app.js -i 0
 
-### The -i 0 flag stands for instances. This will run Node.js application in cluster mode, where the 0 stands for number of CPU cores or user can give as string max so it detects by itself to run on max cores. A negative integer can be given which will evaluate to max-integer.
+ The -i 0 flag stands for instances. This will run Node.js application in cluster mode, where the 0 stands for number of CPU cores or user can give as string max so it detects by itself to run on max cores. A negative integer can be given which will evaluate to max-integer.
 
-## Step 3
+### Step 3
 
     pm2 monit
