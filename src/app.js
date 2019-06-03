@@ -5,6 +5,7 @@ const geocode=require('./utils/geocode');
 const forecast=require('./utils/forecast');
 
 const app = express();
+app.use(require('express-status-monitor')());// to run express status monitor
 const port= process.env.PORT||3000;
 const publicDirectoryPath = path.join(__dirname, '../public')
 
