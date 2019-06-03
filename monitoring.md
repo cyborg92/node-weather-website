@@ -1,19 +1,24 @@
 # Express status monitor
 
-    It is an incredibly simple, self-hosted module,to add to Express server. It exposes a /status route that reports real-time server metrics with the help of Socket.io and Chart.js.
+It is an incredibly simple, self-hosted module,to add to Express server. It exposes a /status route that reports real-time server metrics with the help of Socket.io and Chart.js.
 
-### Step 1. sudo npm install express-status-monitor --save
+### Step 1. 
+    sudo npm install express-status-monitor --save
 
-### Step 2. app.use(require('express-status-monitor')()); 
-    this need to be added before any other middleware or router
+### Step 2. 
+    app.use(require('express-status-monitor')()); 
 
-### Step 3. Run server and go to serverurl/status
+This need to be added before any other middleware or router
+
+### Step 3. 
+
+Run server and go to serverurl/status
 
 # Clinic.js
 
-    Clinic.js includes three tools to help diagnose and pinpoint Node.js performance issues.
+Clinic.js includes three tools to help diagnose and pinpoint Node.js performance issues.
 
-    link for clinic.js https://clinicjs.org/
+link for clinic.js https://clinicjs.org/
 
 ### Doctor
     Collects metrics by injecting probes
@@ -30,15 +35,22 @@
 
 ## Installing Clinic.js
 
-### Step 1. npm install -g clinic
+### Step 1. 
+    npm install -g clinic
 
-### Step 2. clinic mode name(doctor/flame/bubbleprof) --node server-starting-filename.js
+### Step 2. 
+    clinic mode name(doctor/flame/bubbleprof) --node server-starting-filename.js
 
-### Step 3. download a package to run loadtesting, here using autocannon, install it using npm install -g autocannon
+### Step 3. download a package to run loadtesting, here using autocannon, install it using npm 
+    npm install -g autocannon
 
 ### Step 4. In a parallel terminal run autocannon -c number of connections -a amount of requests  server url
+    autocannon -c 1000 -a 10000 http://localhost:3000
 
-### Step 5. In the terminal running clininc, press ctrl+c to generate an html report
+### Step 5. In the terminal running clinic, press ctrl+c to stop the process
+
+This would stop the analysis and create a html page and opens it in browser with all the analysis
+
 
 # Pm2
 
@@ -46,7 +58,8 @@ Running Node.js applications in production gets a lot easier with PM2. It’s a 
 
 ## Installing pm2
 
- ### Step 1. sudo npm install -g pm2
+ ### Step 1. 
+    sudo npm install -g pm2
 
  ### Step 2. Start the pm2 process
 
