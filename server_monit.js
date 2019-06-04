@@ -1,8 +1,8 @@
-// const restify = require('restify');
-// const server = restify.createServer();
+const restify = require('restify');
+const server = restify.createServer();
 
-const express=require('express');
-const app=express();
+// const express=require('express');
+// const app=express();
 const async = require('async') // for slow I/O example
 
 
@@ -33,14 +33,14 @@ function awaitData (callback) {
   ], callback)
 }
 
-app.get('/', function (req, res, next) {
+server.get('/', function (req, res, next) {
   awaitData(function () {
     res.send({})
     next()
   })
 })
 
-var server=app.listen(3000);
+server.listen(3000);
 
 process.on('SIGINT', function () {
   console.error('Caught SIGINT, shutting down.')
