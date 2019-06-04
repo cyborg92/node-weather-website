@@ -44,7 +44,7 @@ link for clinic.js https://clinicjs.org/
 ### Step 3. download a package to run loadtesting, here using autocannon, install it using npm 
     npm install -g autocannon
 
-### Step 4. In a parallel terminal run autocannon -c number of connections -a amount of requests  server url
+### Step 4. In a parallel terminal run autocannon -c number of concurrent connections -a amount of requests  server url
     autocannon -c 1000 -a 10000 http://localhost:3000
 
 ### Step 5. In the terminal running clinic, press ctrl+c to stop the process

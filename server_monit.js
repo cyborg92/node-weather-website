@@ -12,7 +12,7 @@ const async = require('async') // for slow I/O example
 //   while (Date.now() < future);
 // }
 
-// app.get('/', function (req, res, next) {
+// server.get('/', function (req, res, next) {
 //   sleep(30)
 //   res.send({})
 //   next()
